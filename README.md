@@ -10,7 +10,7 @@ This type of attack is called "Data Poisoning" attack. It has not only received 
 ## Usage
 
 ### 1.py
-![image](http://github.com/itmyhome2013/readme_add_pic/raw/master/images/nongshalie.jpg)
+![image](https://github.com/linroad123/ml_data_posion/blob/master/img/headImg.png)
 
 It can be seen that the contour map of the decision function of the MLP classifier basically fits our data set (the red dots are basically in the red shaded part, and the blue points are basically in the blue shaded part)
 
@@ -18,11 +18,11 @@ Here we use a confidence threshold of 0.5 as the decision boundary, that is, if 
 
 
 ### 2.py
-![image](http://github.com/itmyhome2013/readme_add_pic/raw/master/images/nongshalie.jpg)
+![image](https://github.com/linroad123/ml_data_posion/blob/master/img/headImg%20(1).png)
 
 ### add.py
 
-![image](http://github.com/itmyhome2013/readme_add_pic/raw/master/images/nongshalie.jpg)
+![image](https://github.com/linroad123/ml_data_posion/blob/master/img/headImg%20(2).png)
 
 It can be seen that the current 5 points (represented by a five-pointed star) are added in the space of y=1 (y=1 is represented by a hollow circle, and y=0 is represented by a solid circle)
 
@@ -30,7 +30,7 @@ It can be seen that the current 5 points (represented by a five-pointed star) ar
 Data poisoning
 To simulate attackers dynamically and incrementally attacking machine learning models, we use scikit-learning's partial_fit() API for incremental learning. We incrementally train the existing classifier by fitting the model part to our newly added 5 points.
 
-![image](http://github.com/itmyhome2013/readme_add_pic/raw/master/images/nongshalie.jpg)
+![image](https://github.com/linroad123/ml_data_posion/blob/master/img/headImg%20(3).png)
 
 At this time, there is an additional gray line, which is the new decision boundary, and we noticed that there has been an offset at this time. Through this shift, the part between the two decision-making boundaries that should have been classified as y=0 will now be classified as y=1.
 
@@ -39,14 +39,18 @@ It shows that the attacker has successfully caused the sample to be misclassifie
 ### 4.py
 Repeat 5 times
 
-![image](http://github.com/itmyhome2013/readme_add_pic/raw/master/images/nongshalie.jpg)
+![image](https://github.com/linroad123/ml_data_posion/blob/master/img/headImg%20(4).png)
+![image](https://github.com/linroad123/ml_data_posion/blob/master/img/headImg%20(5).png)
+![image](https://github.com/linroad123/ml_data_posion/blob/master/img/headImg%20(6).png)
+![image](https://github.com/linroad123/ml_data_posion/blob/master/img/headImg%20(7).png)
+![image](https://github.com/linroad123/ml_data_posion/blob/master/img/headImg%20(8).png)
 
 It can be seen that as partial_fit() is repeatedly used iteratively, the new boundary shifts more and more
 
 ### 5.py
 Repeat 15 times directly
 
-![image](http://github.com/itmyhome2013/readme_add_pic/raw/master/images/nongshalie.jpg)
+![image](https://github.com/linroad123/ml_data_posion/blob/master/img/headImg%20(9).png)
 
 The point pointed to by the red arrow in the above figure should be classified as y=1 under the original decision boundary, but under the current decision boundary, it should be classified as y=0. In this way, the attacker successfully attacked the machine learning model through data poisoning.
 
