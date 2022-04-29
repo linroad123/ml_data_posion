@@ -25,6 +25,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       - name: CycloneDX Python Generate SBOM
-        uses: CycloneDX/gh-python-generate-sbom@v1.0.0
+        uses: linroad123/gh-python-generate-sbom@master
 
 
