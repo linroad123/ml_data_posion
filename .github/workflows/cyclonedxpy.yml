@@ -33,7 +33,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: sbom
-          path: bom.xml
+          path: cyclonedx.xml
           
           
 
