@@ -32,6 +32,7 @@ jobs:
       - name: upload bom file
         uses: actions/upload-artifact@v1
         with:
+          name: sbom
           path: ${{ github.workspace }}/bom.xml
           
           
