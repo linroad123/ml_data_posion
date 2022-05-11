@@ -41,6 +41,7 @@ jobs:
       - name: Upload to server  
         uses: DependencyTrack/gh-upload-sbom@v1.0.0
         with:
+          bomfilename: cyclonedx.xml
           serverhostname: '127.0.0.1:8080'
           apikey: e0ryujdg0uKhPLalKwC3pd5pRylkOLNh 
           project: '1cba8488-2aa2-4a63-9736-72a97027a37b'
