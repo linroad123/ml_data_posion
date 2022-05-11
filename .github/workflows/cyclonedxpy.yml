@@ -43,7 +43,7 @@ jobs:
         with:
           serverhostname: '127.0.0.1'
           port: 8080
-          apikey: e0ryujdg0uKhPLalKwC3pd5pRylkOLNh 
+          apikey: ${{ secrets.APIKEY }}
           project: '1cba8488-2aa2-4a63-9736-72a97027a37b'
           bomfilename: cyclonedx.xml
 
